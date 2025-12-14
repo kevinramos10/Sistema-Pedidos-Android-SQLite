@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#75A8A9"
+    tools:context=".admin.AdminAgregarProductoActivity">
+
+    <TextView
+        android:id="@+id/txtAgregarProducto"
+        android:layout_width="306dp"
+        android:layout_height="94dp"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.05"
+        android:padding="16dp"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:text="Producto"
+        android:textColor="#6E0020"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.704"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioGroup
+        android:layout_width="337dp"
+        android:layout_height="123dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbPlatillos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Platillos"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rbPostres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Postres"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbBebidas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bebidas"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rbAdocionales"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Adicionales"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etAgregarProductoStock"
+        android:layout_width="360dp"
+        android:layout_height="49dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Ingrese la Cantidad"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:textColorHint="#EBE7E7"
+        android:textColorLink="#2D94B8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.582" />
+
+    <EditText
+        android:id="@+id/etAgregarProductoPrecio"
+        android:layout_width="363dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Ingrese el Precio"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:textColorHint="#EBE7E7"
+        android:textColorLink="#2D94B8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.696" />
+
+    <TextView
+        android:id="@+id/tvAgregarProductoPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.05"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:text="Precio:"
+        android:textColor="#020C0F"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.636" />
+
+    <TextView
+        android:id="@+id/tvAgregarProductoStock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.05"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:text="Stock:"
+        android:textColor="#020C0F"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.526" />
+
+    <TextView
+        android:id="@+id/tvAgregarProductoImagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.05"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:text="Imagen:"
+        android:textColor="#020C0F"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.748" />
+
+    <EditText
+        android:id="@+id/etAgregarProductoDescripcion"
+        android:layout_width="359dp"
+        android:layout_height="49dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Ingrese la Descipcion"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="#EBE7E7"
+        android:textColorLink="#2D94B8"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <TextView
+        android:id="@+id/tvAgregarProductoCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.05"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:text="Categoria:"
+        android:textColor="#020C0F"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348" />
+
+    <EditText
+        android:id="@+id/etAgregarProductoNombre"
+        android:layout_width="359dp"
+        android:layout_height="49dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Ingrese el Nombre"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="#EBE7E7"
+        android:textColorLink="#2D94B8"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.153" />
+
+    <TextView
+        android:id="@+id/tvAgregarProductoNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.05"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:text="Nombre:"
+        android:textColor="#020C0F"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108" />
+
+    <TextView
+        android:id="@+id/tvAgregarProductoDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.05"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:text="Descripción:"
+        android:textColor="#020C0F"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.235" />
+
+
+    <Button
+        android:id="@+id/btnAgregarProductoImagen"
+        android:layout_width="145dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#6F0121"
+        android:fontFamily="sans-serif-medium"
+        android:stateListAnimator="@null"
+        android:text="Buscar Imagen"
+        android:textColor="#F7FAFB"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89" />
+
+    <ImageView
+        android:id="@+id/ivAgregarProductoFoto"
+        android:layout_width="162dp"
+        android:layout_height="131dp"
+        android:layout_marginTop="8dp"
+        android:background="#D9D9D9"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.935" />
+
+    <Button
+        android:id="@+id/btnAgregarProductoConfirmar"
+        android:layout_width="146dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#6F0121"
+        android:fontFamily="sans-serif-medium"
+        android:stateListAnimator="@null"
+        android:text="Confirmar"
+        android:textColor="#F7FAFB"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992" />
+
+    <TextView
+        android:id="@+id/tvAgregarProductoVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="sans-serif-medium"
+        android:text="Volver"
+        android:textColor="#4B1F22"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#75A8A9"
+    tools:context=".admin.AdminVerCartaActivity">
+
+
+    <ImageView
+        android:id="@+id/imgLogoAdminCarta"
+        android:layout_width="236dp"
+        android:layout_height="141dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.003"
+        app:srcCompat="@drawable/principal_cheff" />
+
+
+    <TextView
+        android:id="@+id/txtAdminCarta"
+        android:layout_width="233dp"
+        android:layout_height="102dp"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.05"
+        android:padding="16dp"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:text="Carta"
+        android:textAlignment="center"
+        android:textColor="#6E0020"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <Button
+        android:id="@+id/btnAdminVerPlatillos"
+        android:layout_width="296dp"
+        android:layout_height="69dp"
+        android:backgroundTint="#720122"
+        android:fontFamily="sans-serif-medium"
+        android:stateListAnimator="@null"
+        android:text="Ver Platillos"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.27" />
+
+    <Button
+        android:id="@+id/btnAdminVerBebidas"
+        android:layout_width="296dp"
+        android:layout_height="69dp"
+        android:backgroundTint="#720122"
+        android:fontFamily="sans-serif-medium"
+        android:stateListAnimator="@null"
+        android:text="Ver Bebidas"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.398" />
+
+    <Button
+        android:id="@+id/btnAdminVerPostres"
+        android:layout_width="296dp"
+        android:layout_height="69dp"
+        android:backgroundTint="#720122"
+        android:fontFamily="sans-serif-medium"
+        android:stateListAnimator="@null"
+        android:text="Ver Postres"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53" />
+
+    <Button
+        android:id="@+id/btnAdminVerAdicionales"
+        android:layout_width="296dp"
+        android:layout_height="69dp"
+        android:backgroundTint="#720122"
+        android:fontFamily="sans-serif-medium"
+        android:stateListAnimator="@null"
+        android:text="Ver Adicionales"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.663" />
+
+    <Button
+        android:id="@+id/btnAdminAgregarProducto"
+        android:layout_width="296dp"
+        android:layout_height="69dp"
+        android:backgroundTint="#720122"
+        android:fontFamily="sans-serif-medium"
+        android:stateListAnimator="@null"
+        android:text="Agregar Producto"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.871" />
+
+    <TextView
+        android:id="@+id/tvAdminCartaCS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="sans-serif-medium"
+        android:text="Volver"
+        android:textColor="#4B1F22"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

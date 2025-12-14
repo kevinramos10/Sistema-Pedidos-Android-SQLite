@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ExamFinal">
+        <activity
+            android:name=".cliente.ClienteDetalleCompraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cliente.ClienteVerComprasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cliente.ClienteVerComprasctivity"
+            android:exported="false"
+            android:theme="@style/Theme.ExamFinal" />
+        <activity
+            android:name=".cliente.ClienteMetodoPagoActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDOcStNwJCquyJipOjRBfQySAnplvrwUYo" />
+
+        <activity
+            android:name=".cliente.ClienteSeleccionarDestinoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cliente.ClienteCarritoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminVerAdicionalesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminVerPostresActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminVerBebidasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cliente.ClienteAdicionalesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ExamFinal" />
+        <activity
+            android:name=".cliente.ClientePostresActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cliente.ClienteBebidasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cliente.ClientePlatillosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminVerPlatilloActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminAgregarProductoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminVerCartaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminVerAdministradoresActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminVerClientesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cliente.ClienteMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrarseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IniciarActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

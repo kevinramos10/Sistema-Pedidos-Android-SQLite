@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- Imagen -->
+    <ImageView
+        android:id="@+id/imgCompra"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg_rounded"
+        android:clipToOutline="true"
+        android:src="@drawable/bolso"/>
+
+    <!-- Columna de textos -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <TextView
+            android:id="@+id/txtCompraTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Compra #1"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/txtCompraFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2025-02-14 15:30"
+            android:textSize="15sp"
+            android:textColor="#555555"
+            android:paddingTop="4dp"/>
+    </LinearLayout>
+
+    <!-- Botón Ver Detalle -->
+    <Button
+        android:id="@+id/btnVerDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver detalle"
+        android:backgroundTint="#1E88E5"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>

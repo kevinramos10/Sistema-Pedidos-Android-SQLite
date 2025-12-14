@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- Imagen -->
+    <ImageView
+        android:id="@+id/imgItemPlatillo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg_rounded"
+        android:clipToOutline="true"
+        android:src="@drawable/comida"/>
+
+    <!-- Info -->
+    <LinearLayout
+        android:layout_width="236dp"
+        android:layout_height="57dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="12dp">
+
+        <TextView
+            android:id="@+id/tvPlatilloNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Nombre del Platillo"
+            android:textColor="#222222"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvPlatilloPrecio"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Precio"
+                android:textColor="#222222"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPlatilloCantidad"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Cantidad"
+                android:textColor="#222222"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Acciones admin -->
+    <ImageButton
+        android:id="@+id/btnEditarPlatillo"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@android:drawable/ic_menu_edit"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:tint="#006E6E"
+        android:contentDescription="Editar"/>
+
+    <ImageButton
+        android:id="@+id/btnEliminarPlatillo"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@android:drawable/ic_menu_delete"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:tint="#B00020"
+        android:contentDescription="Eliminar"/>
+
+</LinearLayout>
