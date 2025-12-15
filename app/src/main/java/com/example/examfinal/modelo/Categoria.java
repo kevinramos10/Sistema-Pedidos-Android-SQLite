@@ -30,7 +30,7 @@ public class Categoria {
 
     @Override
     public String toString() {
-        return nombre; // importante para mostrar el nombre en Spinner
+        return nombre;
     }
 
 }

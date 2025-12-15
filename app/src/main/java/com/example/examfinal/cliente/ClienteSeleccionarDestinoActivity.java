@@ -57,12 +57,6 @@ public class ClienteSeleccionarDestinoActivity extends AppCompatActivity
 
             startActivity(i);
 
-
-            // Aquí puedes enviar los datos a otra activity
-            // Intent intent = new Intent(this, ClienteConfirmarPedidoActivity.class);
-            // intent.putExtra("lat", destinoSeleccionado.latitude);
-            // intent.putExtra("lng", destinoSeleccionado.longitude);
-            // startActivity(intent);
         });
 
 

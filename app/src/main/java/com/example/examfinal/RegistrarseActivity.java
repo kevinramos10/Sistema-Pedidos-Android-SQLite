@@ -28,8 +28,6 @@ public class RegistrarseActivity extends AppCompatActivity {
     Button btnRegistrar;
     TextView btnvolver;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +49,6 @@ public class RegistrarseActivity extends AppCompatActivity {
         btnRegistrar = findViewById(R.id.btnRegistrarseRegistro);
 
         btnvolver = findViewById(R.id.tvRegistrarseVolver);
-
 
         // Instancia del negocio
         ClienteNegocio negocio = new ClienteNegocio(this);
@@ -75,10 +72,8 @@ public class RegistrarseActivity extends AppCompatActivity {
         });
         String modo = getIntent().getStringExtra("modo");
 
-
         Cliente clienteEditar = (Cliente) getIntent().getSerializableExtra("clienteEditar");
         Administrador adminEditar = (Administrador) getIntent().getSerializableExtra("AdminEditar");
-
 
         if (clienteEditar != null) {
             // Estamos en modo EDICIÓN
@@ -92,7 +87,7 @@ public class RegistrarseActivity extends AppCompatActivity {
             btnRegistrar.setText("Actualizar"); // cambiar texto del botón
 
         }else if(adminEditar != null){
-            // MODO EDICIÓN ADMINISTRADOR
+            // Modo edicion admin
             etDni.setText(adminEditar.getDni());
             etNombres.setText(adminEditar.getNombres());
             etApellidos.setText(adminEditar.getApellidos());
@@ -105,7 +100,7 @@ public class RegistrarseActivity extends AppCompatActivity {
 
         btnRegistrar.setOnClickListener(v -> {
 
-            // SI EDITA CLIENTE
+            // Edita cliente
             if (clienteEditar != null) {
                 Cliente cli = new Cliente();
                 cli.setId(clienteEditar.getId());
@@ -122,7 +117,7 @@ public class RegistrarseActivity extends AppCompatActivity {
                 return;
             }
 
-            // SI EDITA ADMINISTRADOR
+            // Edita administrador
             if (adminEditar != null) {
 
                 Administrador admin = new Administrador();
@@ -142,7 +137,7 @@ public class RegistrarseActivity extends AppCompatActivity {
                 return;
             }
 
-            // SI ES NUEVO ADMINISTRADOR
+            // Si es admin nuevo
             if ("admin_nuevo".equals(modo)) {
 
                 Administrador nuevo = new Administrador();
@@ -162,7 +157,7 @@ public class RegistrarseActivity extends AppCompatActivity {
                 return;
             }
 
-            // SI ES NUEVO CLIENTE
+            // Si es cliente nuevo
             Cliente cli = new Cliente();
             cli.setDni(etDni.getText().toString());
             cli.setNombres(etNombres.getText().toString());
@@ -175,15 +170,10 @@ public class RegistrarseActivity extends AppCompatActivity {
             Toast.makeText(this, r, Toast.LENGTH_LONG).show();
             if (r.contains("correctamente")) finish();
 
-
-
-
-
         });
 
         btnvolver.setOnClickListener(v -> {
-            finish(); // Regresa a la pantalla anterior
+            finish();
         });
-
     }
 }

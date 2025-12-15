@@ -40,7 +40,6 @@ public class DetalleCompraDAO {
         return db.insert("detalle_compra", null, values);
     }
 
-
     // Listar detalles por compra
     public ArrayList<DetalleCompra> listarPorCompra(int compraId){
         ArrayList<DetalleCompra> lista = new ArrayList<>();

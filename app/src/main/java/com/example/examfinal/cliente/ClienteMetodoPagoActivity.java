@@ -44,7 +44,7 @@ public class ClienteMetodoPagoActivity extends AppCompatActivity {
 
     private double totalCompra = 0;
 
-    // 👉 Nuevo: para guardar qué método se seleccionó
+    //Guardar qué método se seleccionó
     private String metodoSeleccionado = "";
 
     @Override
@@ -59,13 +59,13 @@ public class ClienteMetodoPagoActivity extends AppCompatActivity {
         imgQrYape = findViewById(R.id.imgQrYape);
         imgQrPlin = findViewById(R.id.imgQrPlin);
 
-        // 🔥 Inicializar correctamente MaterialCardView
+        //Inicializar correctamente MaterialCardView
         cardYape = findViewById(R.id.cardYape);
         cardPlin = findViewById(R.id.cardPlin);
 
         mostrarQRsFijos();
 
-        // 👉 Detectar selección de método
+        //Detectar selección de método
         imgQrYape.setOnClickListener(v -> {
             metodoSeleccionado = "Yape";
             actualizarSeleccion();
@@ -78,7 +78,7 @@ public class ClienteMetodoPagoActivity extends AppCompatActivity {
             Toast.makeText(this, "Método seleccionado: Plin", Toast.LENGTH_SHORT).show();
         });
 
-        // 👉 Confirmación antes de pagar
+        //Confirmación antes de pagar
         btnFinalizarPedido.setOnClickListener(v -> {
 
             if (metodoSeleccionado.isEmpty()) {
@@ -130,10 +130,8 @@ public class ClienteMetodoPagoActivity extends AppCompatActivity {
         compra.setDestinoLat(latitudDestino);
         compra.setDestinoLng(longitudDestino);
 
-        // 👉 Guardamos YAPE o PLIN según selección
         compra.setMetodoPago(metodoSeleccionado);
 
-        // Puedes poner "Pendiente" o "Pagado" según tu flujo
         compra.setEstado("Pagado");
 
         NegocioCompra negCompra = new NegocioCompra(this);

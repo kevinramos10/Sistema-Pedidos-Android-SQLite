@@ -66,7 +66,7 @@ public class CompraDAO {
         return lista;
     }
 
-    // LISTAR POR CLIENTE
+    // listar por cliente
     public List<Compra> listarPorCliente(int idCliente) {
         List<Compra> lista = new ArrayList<>();
         Cursor cursor = null;

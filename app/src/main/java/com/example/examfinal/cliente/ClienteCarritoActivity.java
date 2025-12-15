@@ -53,7 +53,7 @@ public class ClienteCarritoActivity extends AppCompatActivity {
         });
 
         btnvolver.setOnClickListener(v -> {
-            finish(); // Regresa a la pantalla anterior
+            finish();
         });
 
 

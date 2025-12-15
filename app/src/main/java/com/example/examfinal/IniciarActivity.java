@@ -36,7 +36,6 @@ public class IniciarActivity extends AppCompatActivity {
         etPassword.setText("");
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,7 +87,7 @@ public class IniciarActivity extends AppCompatActivity {
 
             if (cli != null) {
 
-                // GUARDAR EL ID DEL CLIENTE EN SESIÓN
+                // Guarda el id del cliente en la sesion
                 SharedPreferences prefs = getSharedPreferences("datos_session", MODE_PRIVATE);
                 SharedPreferences.Editor editor = prefs.edit();
                 editor.putInt("cliente_id", cli.getId());
@@ -104,11 +103,5 @@ public class IniciarActivity extends AppCompatActivity {
                 Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
             }
         });
-
-
-
-
     }
-
-
 }

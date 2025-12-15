@@ -219,19 +219,4 @@ public class ProductoDAO {
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

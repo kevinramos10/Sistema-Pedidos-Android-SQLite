@@ -35,17 +35,17 @@ public class ClienteDetalleCompraActivity extends AppCompatActivity {
 
         btnVolver = findViewById(R.id.tvVerClientesVerDetalleCompraVolver);
 
-        // --- Obtener detalles desde BD ---
+        //Obtener detalles desde BD
         DetalleCompraDAO dao = new DetalleCompraDAO(this);
         dao.abrir();
         List<DetalleCompra> lista = dao.listarPorCompra(idCompra);
         dao.cerrar();
 
-        // --- Mostrar lista ---
+        //Mostrar lista
         adapter = new AdapterDetalleCompra(this, lista);
         recycler.setAdapter(adapter);
 
-        // --- Calcular total ---
+        //Calcular total
         double total = 0;
         for (DetalleCompra d : lista) {
             total += d.getSubtotal();
@@ -54,7 +54,7 @@ public class ClienteDetalleCompraActivity extends AppCompatActivity {
         txtTotal.setText("Total: S/ " + String.format("%.2f", total));
 
         btnVolver.setOnClickListener(v -> {
-            finish(); // Regresa a la pantalla anterior
+            finish();
         });
     }
 }

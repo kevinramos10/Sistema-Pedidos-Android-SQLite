@@ -41,17 +41,12 @@ public class ClientePlatillosActivity extends AppCompatActivity {
         tvVolver = findViewById(R.id.tvAdminPlatillosVolver);
         PN = new ProductoNegocio(this);
 
-        // Supongamos que la categoría "Platillos" tiene ID = 1
         List<Producto> listaPlatillos = PN.listarPorCategoria(1);
 
-        // Configurar RecyclerView
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2)); // 2 columnas
 
-        // 🔹 Crear y asignar el adapter con la lista de productos
         adapter = new ItemClientePlatillos(this, listaPlatillos);
         recyclerView.setAdapter(adapter);
-
-        // Acción del botón Volver
         tvVolver.setOnClickListener(v -> finish());
     }
 }

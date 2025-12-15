@@ -52,9 +52,6 @@ public class ClienteMenuActivity extends AppCompatActivity {
 
         btnCerrarSesion = findViewById(R.id.tvClientesMenuVolver);
 
-
-        //---
-
         // img Platillo
         imgClientePlatillo.setOnClickListener(v -> {
             Intent x = new Intent(ClienteMenuActivity.this, ClientePlatillosActivity.class);
@@ -112,19 +109,18 @@ public class ClienteMenuActivity extends AppCompatActivity {
         });
 
 
-
         btnCerrarSesion.setOnClickListener(v -> {
 
-            // 1. BORRAR SESIÓN
+            //BORRAR SESIÓN
             SharedPreferences prefs = getSharedPreferences("datos_session", MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();
             editor.clear(); // borra cliente_id
             editor.apply();
 
-            // 2. IR AL LOGIN
+            // IR AL LOGIN
             Intent intent = new Intent(ClienteMenuActivity.this, IniciarActivity.class);
 
-            // 3. LIMPIAR LA PILA DE ACTIVIDADES
+            // LIMPIAR LA PILA DE ACTIVIDADES
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 
             startActivity(intent);

@@ -40,7 +40,7 @@ public class AdminAgregarProductoActivity extends AppCompatActivity {
 
     private ProductoNegocio negocio;
 
-    private Producto productoEditar = null;   // <-- Producto recibido para EDITAR
+    private Producto productoEditar = null;
     private TextView btnCerrarSesion;
 
     @Override
@@ -55,7 +55,7 @@ public class AdminAgregarProductoActivity extends AppCompatActivity {
             return insets;
         });
 
-        // ------------------------- ENLAZAR VISTAS -------------------------
+        //ENLAZAR VISTAS
         etAgregarProductoNombre = findViewById(R.id.etAgregarProductoNombre);
         etAgregarProductoDescripcion = findViewById(R.id.etAgregarProductoDescripcion);
         etAgregarProductoStock = findViewById(R.id.etAgregarProductoStock);
@@ -71,21 +71,21 @@ public class AdminAgregarProductoActivity extends AppCompatActivity {
 
         negocio = new ProductoNegocio(this);
 
-        // ---------------------- RECIBIR PRODUCTO PARA EDITAR ----------------------
+        //RECIBIR PRODUCTO PARA EDITAR
         productoEditar = (Producto) getIntent().getSerializableExtra("ProductoEditar");
 
         if (productoEditar != null) {
             cargarDatosEdicion();
         }
 
-        // ---------------------- SELECCIONAR IMAGEN ----------------------
+        //SELECCIONAR IMAGEN
         btnAgregarProductoImagen.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_PICK);
             intent.setType("image/*");
             startActivityForResult(intent, PICK_IMAGE_REQUEST);
         });
 
-        // ---------------------- GUARDAR PRODUCTO ----------------------
+        //GUARDAR PRODUCTO
         btnAgregarProductoConfirmar.setOnClickListener(v -> guardarProducto());
 
         btnCerrarSesion.setOnClickListener(v -> finish());
@@ -109,7 +109,7 @@ public class AdminAgregarProductoActivity extends AppCompatActivity {
             File file = new File(productoEditar.getFoto());
             if (file.exists()) {
                 ivAgregarProductoFoto.setImageBitmap(BitmapFactory.decodeFile(file.getAbsolutePath()));
-                rutaLocalImagen = productoEditar.getFoto(); // mantener imagen original
+                rutaLocalImagen = productoEditar.getFoto();
             }
         }
 
@@ -142,7 +142,7 @@ public class AdminAgregarProductoActivity extends AppCompatActivity {
         double precio = Double.parseDouble(precioStr);
         int stock = Integer.parseInt(stockStr);
 
-        // ---------------- MODO EDITAR ----------------
+        //MODO EDITAR
         if (productoEditar != null) {
             productoEditar.setNombre(nombre);
             productoEditar.setDescripcion(descripcion);
@@ -161,7 +161,7 @@ public class AdminAgregarProductoActivity extends AppCompatActivity {
             return;
         }
 
-        // ---------------- MODO REGISTRAR NUEVO ----------------
+        //MODO REGISTRAR NUEVO
         Producto nuevo = new Producto();
         nuevo.setNombre(nombre);
         nuevo.setDescripcion(descripcion);

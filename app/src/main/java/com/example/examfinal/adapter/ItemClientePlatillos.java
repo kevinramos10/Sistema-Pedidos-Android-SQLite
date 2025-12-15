@@ -62,15 +62,13 @@ public class ItemClientePlatillos extends RecyclerView.Adapter<ItemClientePlatil
             holder.imgItemPlatillos.setImageResource(R.drawable.comida);
         }
 
-        // ============================================================
+
         //  Recuperar cantidad guardada en CarritoTemp
-        // ============================================================
         int cantidadGuardada = CarritoTemp.getInstancia().obtenerCantidad(producto.getId());
         holder.tvClientePlatilloCantidad.setText(String.valueOf(cantidadGuardada));
 
-        // ============================================================
-        // ➕ Botón MAS
-        // ============================================================
+
+        // Botón MAS
         holder.btnClientePlatilloMas.setOnClickListener(v -> {
             int cantidad = Integer.parseInt(holder.tvClientePlatilloCantidad.getText().toString());
             if (cantidad < producto.getStock()) {
@@ -82,9 +80,7 @@ public class ItemClientePlatillos extends RecyclerView.Adapter<ItemClientePlatil
             }
         });
 
-        // ============================================================
-        // ➖ Botón MENOS
-        // ============================================================
+        // Botón MENOS
         holder.btnClientePlatilloMenos.setOnClickListener(v -> {
             int cantidad = Integer.parseInt(holder.tvClientePlatilloCantidad.getText().toString());
             if (cantidad > 0) {
@@ -102,7 +98,6 @@ public class ItemClientePlatillos extends RecyclerView.Adapter<ItemClientePlatil
         return listaPlatillos.size();
     }
 
-    //ViewHolder
     public static class PlatillosViewHolder extends RecyclerView.ViewHolder{
         ImageView imgItemPlatillos;
         TextView tvClientePlatilloNombre, tvClientePlatilloStock, tvClientePlatilloPrecio, tvClientePlatilloCantidad;

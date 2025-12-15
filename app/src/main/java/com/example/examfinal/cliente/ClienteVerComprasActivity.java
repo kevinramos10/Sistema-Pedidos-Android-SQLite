@@ -49,7 +49,6 @@ public class ClienteVerComprasActivity extends AppCompatActivity {
                 this,
                 listaCompras,
                 compra -> {
-                    // AQUÍ YA DIRIGES A ClienteDetalleCompraActivity
                     Intent i = new Intent(ClienteVerComprasActivity.this, ClienteDetalleCompraActivity.class);
                     i.putExtra("id_compra", compra.getId());
                     startActivity(i);
@@ -60,7 +59,7 @@ public class ClienteVerComprasActivity extends AppCompatActivity {
         recyclerCompras.setAdapter(adapter);
 
         btnvolver.setOnClickListener(v -> {
-            finish(); // Regresa a la pantalla anterior
+            finish();
         });
     }
 }

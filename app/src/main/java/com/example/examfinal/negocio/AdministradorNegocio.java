@@ -83,7 +83,6 @@ public class AdministradorNegocio {
         return lista;
     }
 
-
     // Validar Login
     public Administrador validarLogin(String usuario, String contrasena){
 
@@ -93,7 +92,6 @@ public class AdministradorNegocio {
 
         dao.abrir();
         Administrador admin = dao.validarLogin(usuario, contrasena);
-
 
         return admin;
     }

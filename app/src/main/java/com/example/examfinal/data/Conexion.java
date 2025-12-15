@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class Conexion extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "restaurant_v2.db";
+    private static final String DATABASE_NAME = "restaurant";
 
     private static final int DATABASE_VERSION = 5;
 
@@ -61,10 +61,6 @@ public class Conexion extends SQLiteOpenHelper {
                         ");"
         );
 
-        // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-        //          TABLA COMPRA
-        // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
         db.execSQL(
                 "CREATE TABLE compra (" +
                         "id INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -79,10 +75,6 @@ public class Conexion extends SQLiteOpenHelper {
                         ");"
         );
 
-        // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-        //       TABLA DETALLE COMPRA
-        // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
         db.execSQL(
                 "CREATE TABLE detalle_compra (" +
                         "id INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -96,13 +88,11 @@ public class Conexion extends SQLiteOpenHelper {
                         ");"
         );
 
-
         // Insertar las categorías predeterminadas
         db.execSQL("INSERT INTO categoria (nombre) VALUES ('Platillos');");
         db.execSQL("INSERT INTO categoria (nombre) VALUES ('Bebidas');");
         db.execSQL("INSERT INTO categoria (nombre) VALUES ('Postres');");
         db.execSQL("INSERT INTO categoria (nombre) VALUES ('Adicionales');");
-
 
     }
 
