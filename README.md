@@ -25,14 +25,14 @@ Aplicación móvil desarrollada en Android Studio que permite gestionar pedidos 
 
 ---
 
-## 🔐 Tipos de Usuario
+## Tipos de Usuario
 
-* 👨‍💼 Administrador:
+* Administrador:
 
   * Gestión de productos
   * Visualización de pedidos
 
-* 👤 Cliente:
+* Cliente:
 
   * Registro de pedidos
   * Consulta de productos
@@ -40,13 +40,13 @@ Aplicación móvil desarrollada en Android Studio que permite gestionar pedidos 
 
 ---
 
-## 🗄️ Base de Datos
+## Base de Datos
 
 El sistema utiliza SQLite como base de datos local en el dispositivo móvil.
 
 ---
 
-## ⚙️ Ejecución
+## Ejecución
 
 1. Clonar el repositorio
 2. Abrir el proyecto en Android Studio
@@ -54,17 +54,17 @@ El sistema utiliza SQLite como base de datos local en el dispositivo móvil.
 
 ---
 
-## 📸 Capturas del Sistema
+## Capturas del Sistema
 
-### 🔐 Login
+### Login
 
 ![Login](img/principal1.png)
 
-### 🏠 Menú Principal
+### Menú Principal
 
 ![Menu](img/principal2.png)
 
-### 📦 Registro de productos
+### Registro de productos
 
 ![Pedido](img/principal3.png)
 
